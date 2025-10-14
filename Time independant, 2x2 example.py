@@ -11,15 +11,15 @@ mew = np.array([0.99, 0.01])
 gamma = 0.5
 phi = 500
 rho_q = 0.55
-rho_mew = 0.88
+rho_mew = 0.85
 p = 0.01
 
 
 Q = np.zeros((len(states), len(actions)))
 
 
-
 def softmin_action(x, Q, beta):
+
     q_values = Q[x]
     # numerically stable softmin probabilities
     weights = np.exp(-beta * (q_values - np.min(q_values)))
