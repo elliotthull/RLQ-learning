@@ -7,12 +7,12 @@ actions = np.array([0,1]) #0: Stay, 1: Move
 
 N = 500
 C = 5 #deterministic variable
-mew = np.array([0.99, 0.01])
+p = 0.01
+mew = np.array([1-p, p])
 gamma = 0.5
 phi = 500
 rho_q = 0.55
 rho_mew = 0.85
-p = 0.01
 
 
 Q = np.zeros((len(states), len(actions)))
